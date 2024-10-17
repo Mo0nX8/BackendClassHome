@@ -19,5 +19,14 @@ namespace VBJ._13B.Group1.WebApp.Controllers
             var editedItems = Movies.FirstOrDefault(x => x.ID == id);
             return View(editedItems);
         }
+        public IActionResult Delete(int id)
+        {
+            var deletedItems = Movies.FirstOrDefault(x => x.ID == id);
+            if (deletedItems is null)
+            {
+                return NotFound();
+            }
+            return View(deletedItems);
+        }
     }
 }

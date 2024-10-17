@@ -46,5 +46,15 @@ namespace VBJ._13B.Group1.WebApp.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public IActionResult DeleteMovie(int id)
+        {
+            var deletedItems = Movies.FirstOrDefault(x => x.ID == id);
+            if (deletedItems is not null)
+            {
+                Movies.Remove(deletedItems);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

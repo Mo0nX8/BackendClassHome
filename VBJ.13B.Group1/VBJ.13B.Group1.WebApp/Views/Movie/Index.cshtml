@@ -1,5 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using VBJ._13B.Group1.WebApp.Models
+@model List<Movie>
 @{
+    ViewData["Title"] = "Movies";
 }
+
+<a href="@Url.Action("Create","Movie")">Add movie</a>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Release year</th>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+        {
+            @foreach (Movie item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Title</td>
+                    <td>@item.Genre</td>
+                    <td>@item.ReleaseYear</td>
+                    <td><a href="@Url.Action("Edit", new { id = item.ID })">Szerkesztés</a></td>
+                    <td><a href="@Url.Action("Delete", new { id = item.ID })">Törlés</a></td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

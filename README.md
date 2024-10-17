@@ -2,7 +2,7 @@
 
 ##TaskSolveFromHome
 
-##I comment everything
-
 ###Solutions for Room, Movie and Student task
+
+# Everything commented
 	

@@ -1,8 +1,8 @@
 # vbj.13B.Group1.Kovacs.Daniel	
 
-##TaskSolveFromHome
+## TaskSolveFromHome ## 
 
-###Solutions for Room, Movie and Student task###
+### Solutions for Room, Movie and Student task ###
 
 # Everything commented
 	

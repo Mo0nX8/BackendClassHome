@@ -1,5 +1,34 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using VBJ._13B.Group1.WebApp.Models
+@model List<Student>
 @{
+    ViewData["Title"] = "Students";
 }
+
+<a href="@Url.Action("Register")">Tanuló felvétele</a>
+<table>
+    <thead>
+    <th>Azonosító</th>
+    <th>Vezetéknév</th>
+    <th>Keresztnév</th>
+    <th>Email cím</th>
+    <th>Felvétel dátuma</th>
+    <th>Törlés</th>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+        {
+            @foreach (Student item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.firstName</td>
+                    <td>@item.lastName</td>
+                    <td>@item.emailAddress</td>
+                    <td>@item.date</td>
+                    <td><a href="@Url.Action("Delete", new { id = item.ID})">Törlés</a></td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

@@ -2,5 +2,7 @@
 {
     public class viewModelRoomBooking
     {
+        public Room roomView { get; set; }
+        public Booking bookingView { get; set; }
     }
 }

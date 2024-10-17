@@ -28,5 +28,11 @@ namespace VBJ._13B.Group1.WebApp.Controllers
             }
             return View(deletedItems);
         }
+        public IActionResult AddMovie(Movie item)
+        {
+            item.ID = Movies.Any() ? Movies.Last().ID : 1;
+            Movies.Add(item);
+            return RedirectToAction("Index");
+        }
     }
 }

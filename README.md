@@ -2,7 +2,7 @@
 
 ##TaskSolveFromHome
 
-###Solutions for Room, Movie and Student task
+###Solutions for Room, Movie and Student task###
 
 # Everything commented
 	

@@ -21,6 +21,15 @@ namespace VBJ._13B.Group1.WebApp.Controllers
             studentsList.Add(item);
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            var deletedItems = studentsList.FirstOrDefault(x => x.ID == id);
+            if (deletedItems != null)
+            {
+                studentsList.Remove(deletedItems);
+            }
+            return RedirectToAction("Index");
+        }
 
     }
 }

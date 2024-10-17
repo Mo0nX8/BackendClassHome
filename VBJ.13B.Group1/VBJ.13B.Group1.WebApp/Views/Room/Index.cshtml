@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using VBJ._13B.Group1.WebApp.Models
 @{
+
 }
+@model List<Room>
+
+<table>
+    <thead>
+    <th>Identification number</th>
+    <th>Available</th>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+        {
+            foreach (Room item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    @if (item.IsAvailable)
+                    {
+                        <td>Available</td>
+                        <td><a href="@Url.Action("BookRoom", new {id=item.ID})">Book now</a></td>
+                    }
+                    else
+                    {
+                        <td>Not available</td>
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>

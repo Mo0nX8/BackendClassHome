@@ -34,5 +34,17 @@ namespace VBJ._13B.Group1.WebApp.Controllers
             Movies.Add(item);
             return RedirectToAction("Index");
         }
+        public IActionResult EditMovie(Movie item)
+        {
+            var editedItems = Movies.FirstOrDefault(x => x.ID == item.ID);
+            if (editedItems is not null)
+            {
+                editedItems.Title = item.Title;
+                editedItems.Genre = item.Genre;
+                editedItems.ReleaseYear = item.ReleaseYear;
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

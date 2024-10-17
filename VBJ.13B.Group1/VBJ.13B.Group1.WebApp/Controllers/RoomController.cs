@@ -26,6 +26,19 @@ namespace VBJ._13B.Group1.WebApp.Controllers
                 };
             }
         }
-
+        public IActionResult BookRoom(int id)
+        {
+            var room = Rooms.FirstOrDefault(x => x.ID == id);
+            if (room is null)
+            {
+                return NotFound();
+            }
+            var viewModel = new viewModelRoomBooking
+            {
+                roomView = room,
+                bookingView = new Booking() { RoomID = room.ID }
+            };
+            return View(viewModel);
+        }
     }
 }

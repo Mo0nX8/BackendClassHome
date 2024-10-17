@@ -7,7 +7,7 @@ namespace VBJ._13B.Group1.WebApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Rooms);
         }
         private static List<Room> Rooms = new List<Room>();
         private static List<Booking> Bookings = new List<Booking>();
@@ -26,5 +26,6 @@ namespace VBJ._13B.Group1.WebApp.Controllers
                 };
             }
         }
+
     }
 }

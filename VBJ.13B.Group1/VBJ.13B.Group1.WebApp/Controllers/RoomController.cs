@@ -40,5 +40,6 @@ namespace VBJ._13B.Group1.WebApp.Controllers
             };
             return View(viewModel);
         }
+
     }
 }

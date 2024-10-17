@@ -1,5 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using VBJ._13B.Group1.WebApp.Models
 @{
+    ViewData["Title"] = "Edit movie";
+}
+@model Movie
+
+@using (Html.BeginForm("EditMovie", "Movie"))
+{
+    <label>Title</label>
+    @Html.TextBoxFor(movie => movie.Title)
+    ;
+    <label>Genre</label>
+    @Html.TextBoxFor(movie => movie.Genre)
+    ;
+    <label>Release Year</label>
+    @Html.TextBoxFor(movie => movie.ReleaseYear)
+    ;
+    @Html.HiddenFor(movie => movie.ID)
+    ;
+    <input type="submit" value="Send">
 }

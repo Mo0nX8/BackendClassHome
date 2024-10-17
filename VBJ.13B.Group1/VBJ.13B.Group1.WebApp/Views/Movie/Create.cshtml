@@ -4,16 +4,18 @@
     ViewData["Title"] = "Create Movie";
 }
 
-@using (Html.BeginForm("AddMovie", "Movie"))
+@using (Html.BeginForm("AddMovie", "Movie")) //AddMovie calls from Controller
 {
     <label>Title</label>
-    @Html.TextBoxFor(movie => movie.Title)
+    @Html.TextBoxFor(movie => movie.Title) //gave value to property
     ;
     <label>Genre</label>
     @Html.TextBoxFor(movie => movie.Genre)
+    //gave value to property
     ;
     <label>Release Year</label>
     @Html.TextBoxFor(movie => movie.ReleaseYear)
+    //gave value to property
     ;
     @Html.HiddenFor(movie => movie.ID)
     ;

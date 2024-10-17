@@ -2,7 +2,7 @@
 @{
 
 }
-@model List<Room>
+@model List<Room>  //give model the Room model's list
 
 <table>
     <thead>
@@ -10,16 +10,16 @@
     <th>Available</th>
     </thead>
     <tbody>
-        @if (Model is not null)
+        @if (Model is not null)  //if model received the waited item
         {
-            foreach (Room item in Model)
+            foreach (Room item in Model)   
             {
                 <tr>
                     <td>@item.ID</td>
-                    @if (item.IsAvailable)
+                    @if (item.IsAvailable)  //check if the room is available
                     {
                         <td>Available</td>
-                        <td><a href="@Url.Action("BookRoom", new {id=item.ID})">Book now</a></td>
+                        <td><a href="@Url.Action("BookRoom", new {id=item.ID})">Book now</a></td> //Redirect to BookRoom page for the selected room
                     }
                     else
                     {

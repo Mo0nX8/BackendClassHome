@@ -2,16 +2,16 @@
 @{
 }
 @model viewModelRoomBooking
-@using (Html.BeginForm("Book", "Room", FormMethod.Post))
+@using (Html.BeginForm("Book", "Room", FormMethod.Post)) //Post method, redirect to Book method
 {
     <label>Customer name</label>
-    @Html.TextBoxFor(book => book.bookingView.CustomerName)
+    @Html.TextBoxFor(book => book.bookingView.CustomerName) //bookingView=Booking model's properties
     ;
     @Html.HiddenFor(book => book.bookingView.BookDate)
     ;
     @Html.HiddenFor(book => book.bookingView.RoomID)
     ;
-    @Html.HiddenFor(item => item.roomView.ID)
+    @Html.HiddenFor(item => item.roomView.ID) //roomView=Room model's properties
     ;
     @Html.HiddenFor(item => item.roomView.IsAvailable)
     <input type="submit" value="Send" />

@@ -1,10 +1,10 @@
 ﻿@using VBJ._13B.Group1.WebApp.Models
 @model List<Movie>
 @{
-    ViewData["Title"] = "Movies";
+    ViewData["Title"] = "Movies"; //set title for page
 }
 
-<a href="@Url.Action("Create","Movie")">Add movie</a>
+<a href="@Url.Action("Create","Movie")">Add movie</a> @*On click redirect to Create page*@
 <table>
     <thead>
     <th>Id</th>
@@ -22,8 +22,8 @@
                     <td>@item.Title</td>
                     <td>@item.Genre</td>
                     <td>@item.ReleaseYear</td>
-                    <td><a href="@Url.Action("Edit", new { id = item.ID })">Szerkesztés</a></td>
-                    <td><a href="@Url.Action("Delete", new { id = item.ID })">Törlés</a></td>
+                    <td><a href="@Url.Action("Edit", new { id = item.ID })">Szerkesztés</a></td> @*Created edit link, gave id to it*@
+                    <td><a href="@Url.Action("Delete", new { id = item.ID })">Törlés</a></td>   @*Created delete link, gave id to it*@
 
                 </tr>
             }

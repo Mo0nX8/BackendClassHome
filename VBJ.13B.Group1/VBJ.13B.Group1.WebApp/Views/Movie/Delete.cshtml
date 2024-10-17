@@ -8,8 +8,8 @@
 <div>@Model.Title</div>
 <div>The action cannot be undone.</div>
 
-@using (Html.BeginForm("DeleteMovie", "Movie", new { id = Model.ID }, FormMethod.Post))
+@using (Html.BeginForm("DeleteMovie", "Movie", new { id = Model.ID }, FormMethod.Post)) //Create a form with PostRequest, confirmation of delete
 {
     <input type="submit" value="Delete" class="btn btn-danger" />
-    <a href="@Url.Action("Index")">Cancel</a>
+    <a href="@Url.Action("Index")">Cancel</a>       //On cancel, the deletion cancels and redirects back to Index
 }

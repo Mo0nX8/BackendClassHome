@@ -7,13 +7,15 @@
 @using (Html.BeginForm("EditMovie", "Movie"))
 {
     <label>Title</label>
-    @Html.TextBoxFor(movie => movie.Title)
+    @Html.TextBoxFor(movie => movie.Title)  //gave value to a property
     ;
     <label>Genre</label>
     @Html.TextBoxFor(movie => movie.Genre)
+    //gave value to a property
     ;
     <label>Release Year</label>
     @Html.TextBoxFor(movie => movie.ReleaseYear)
+    //gave value to a property
     ;
     @Html.HiddenFor(movie => movie.ID)
     ;

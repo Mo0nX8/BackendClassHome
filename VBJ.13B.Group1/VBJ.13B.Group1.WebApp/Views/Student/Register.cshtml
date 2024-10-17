@@ -5,16 +5,18 @@
 }
 
 
-@using (Html.BeginForm("AddStudent", "Student"))
+@using (Html.BeginForm("AddStudent", "Student")) //AddStudent calls from Controller
 {
     <label>First name</label>
-    @Html.TextBoxFor(student => student.firstName)
+    @Html.TextBoxFor(student => student.firstName) //gave value to a property
 
     <label>Last name</label>
     @Html.TextBoxFor(student => student.lastName)
+    //gave value to a property
 
     <label>Email Address</label>
     @Html.TextBoxFor(student => student.emailAddress)
+    //gave value to a property
 
     @Html.HiddenFor(student => student.ID)
 

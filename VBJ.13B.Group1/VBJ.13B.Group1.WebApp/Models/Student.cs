@@ -1,5 +1,8 @@
 ﻿namespace VBJ._13B.Group1.WebApp.Models
 {
+    /// <summary>
+    /// Stores all properties of student
+    /// </summary>
     public class Student
     {
         public int ID { get; set; }

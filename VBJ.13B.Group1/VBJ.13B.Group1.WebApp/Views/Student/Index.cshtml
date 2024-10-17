@@ -4,7 +4,7 @@
     ViewData["Title"] = "Students";
 }
 
-<a href="@Url.Action("Register")">Tanuló felvétele</a>
+<a href="@Url.Action("Register")">Tanuló felvétele</a>  @*On click, Register calls from Controller*@
 <table>
     <thead>
     <th>Azonosító</th>
@@ -25,7 +25,7 @@
                     <td>@item.lastName</td>
                     <td>@item.emailAddress</td>
                     <td>@item.date</td>
-                    <td><a href="@Url.Action("Delete", new { id = item.ID})">Törlés</a></td>
+                    <td><a href="@Url.Action("Delete", new { id = item.ID})">Törlés</a></td> @*Deletion option in table*@
                 </tr>
             }
         }
